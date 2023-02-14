@@ -1,0 +1,11 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - ansible.builtin.add_host:
+        hostname: controller.local
+        ansible_host: 192.168.122.10
+
+- hosts: controller.local
+  gather_facts: false
+  tasks:
+    - ping:
